@@ -5,7 +5,7 @@ export default function StatusBar() {
 
   const fetchStatus = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/status");
+      const res = await fetch("https://motivo-backend.onrender.com/api/status");
       const data = await res.json();
       setStatus(data.services || {});
     } catch (err) {
