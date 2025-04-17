@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Motivo AI Q2 Execution System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains everything needed to launch the AI-powered Rocks + KPI Execution Engine for Q2.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 What's Inside
 
-### `npm start`
+- ✅ Super Checklist milestone tracking
+- 📊 Live KPI dashboard with visual alerts
+- 🤖 Chatbot commands for milestone updates
+- 🔁 SmartSheet sync and automated reminders
+- 🔔 Slack + Email alert system
+- 📈 Burn-up chart tracking execution velocity
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Folder Structure
 
-### `npm test`
+/configs         → KPI rules, sync configs, alert settings  
+/assets          → CSVs, milestone data, chatbot text  
+/frontend.env    → Vercel environment variables  
+/backend.env     → Railway environment variables  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Deployment Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔧 Backend via Railway
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Create a new Railway project: https://railway.app
+2. Connect your `motivo-backend2` GitHub repo
+3. Upload `backend.env` variables in **Settings > Variables**
+4. Replace:
+   - `SMARTSHEET_API_TOKEN`
+   - `SMARTSHEET_SHEET_ID`
+   - `SLACK_WEBHOOK_URL`
+5. Click **Deploy**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🌐 Frontend via Vercel
 
-### `npm run eject`
+1. Go to: https://vercel.com
+2. Connect your `motivo-frontend` GitHub repo
+3. Upload `frontend.env` variables under Project > Settings > Environment
+4. Click **Deploy**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔁 SmartSheet Integration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ensure the following columns exist:
+- `Milestone`
+- `Due Date`
+- `Milestone Complete`
+- `Progress %`
+- `Notes`
+- `Rock Category`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Use the `SmartSheet_AutoTask_Reminders.csv` file to auto-create rows
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤖 Chatbot Commands
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Example commands:
+```
+/rock_tracker
+/update_rock "Define dashboard KPIs" complete
+/remind_me_for "Build chatbot integration"
+/show_rocks_by_week
+/rock_status "AI Chatbot super-duper checklist tool built"
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📊 Tracked KPIs
 
-### Analyzing the Bundle Size
+1. Milestone Completion Rate  
+2. On-Time Task Execution  
+3. Checklist Compliance Rate  
+4. Sales ↔ Ops Handoff Integrity  
+5. Role Assignment Accuracy  
+6. Equipment Readiness Score  
+7. Burn-Up Velocity  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> Defined in: `KPI_Dashboard_Config.json`
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📬 Alerts
 
-### Advanced Configuration
+- Email: `blake.derango@motivo-group.com`
+- Slack Webhook: [Insert yours here]
+- Triggered on: overdue milestones, handoff misses, low compliance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📅 Reporting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Weekly execution report sent to dashboard + inbox  
+- Real-time sync every 30 minutes
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Prepared by: **Blake DeRango**  
+Effective: **Q2 2025**
